@@ -1,6 +1,7 @@
 #!/bin/bash
 
 login_user() {
+  aws configure sso --profile "$1"
   aws sso login --profile "$1"
 }
 
